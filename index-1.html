@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta charset="utf-8">
+	<meta name="description" content="Al Adil Exports - Premium Match Boxes, Coco Products & Rice Varieties">
+	<meta name="keywords" content="Match Box, Coco Peat, Basmati Rice, Jeerakshala Rice, Ponni Rice, Idly Rice, Sona Masoori">
+	<meta name="author" content="Al Adil Exports">
+	<title>Al Adil Exports | Premium Export Products</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/main.css?v=3">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/meanmenu.min.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<style>
+	@media (max-width: 767px) {
+		.header-top-one { display: none !important; }
+	}
+
+	.floating-contact {
+		position: fixed; right: 20px; bottom: 30px; z-index: 9999;
+		display: flex; flex-direction: column; gap: 15px;
+	}
+
+	.contact-btn {
+		width: 55px; height: 55px; border-radius: 50%;
+		display: flex; align-items: center; justify-content: center;
+		font-size: 22px; color: #fff; text-decoration: none;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+		transition: all 0.3s ease; position: relative;
+	}
+
+	.whatsapp { background: #25D366; }
+	.call { background: #E53935; }
+
+	.contact-btn:hover {
+		transform: scale(1.15);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+	}
+
+	.whatsapp:hover { box-shadow: 0 0 15px rgba(37, 211, 102, 0.6); }
+	.call:hover { box-shadow: 0 0 15px rgba(229, 57, 53, 0.6); }
+
+	@keyframes floatY {
+		0% { transform: translateY(0); }
+		50% { transform: translateY(-6px); }
+		100% { transform: translateY(0); }
+	}
+
+	.contact-btn { animation: floatY 3s ease-in-out infinite; }
+	.call { animation-delay: 1.5s; }
+
+	/* Rice Carousel Section */
+	.rice-carousel-sec {
+		background: #f8f9fb;
+		padding: 80px 0 50px;
+	}
+
+	.rice-carousel-sec .sec-title h1 {
+		color: #0f2744;
+	}
+
+	.rice-carousel-sec .sec-title p {
+		color: #666;
+	}
+
+	.rice-slider {
+		margin-top: 20px;
+	}
+
+	.rice-slider .owl-stage {
+		display: flex;
+		align-items: stretch;
+	}
+
+	.rice-card {
+		background: #fff;
+		border-radius: 20px;
+		overflow: hidden;
+		box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+		transition: all 0.4s ease;
+		text-align: center;
+		margin: 15px 10px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.rice-card:hover {
+		transform: translateY(-12px);
+		box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+	}
+
+	.rice-card-img {
+		position: relative;
+		overflow: hidden;
+		height: 240px;
+	}
+
+	.rice-card-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: 0.6s;
+	}
+
+	.rice-card:hover .rice-card-img img {
+		transform: scale(1.08);
+	}
+
+	.rice-card-img .rice-badge {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		background: #D4A64A;
+		color: #fff;
+		padding: 6px 16px;
+		border-radius: 30px;
+		font-size: 12px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.rice-card-body {
+		padding: 25px 20px;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.rice-card-body h3 {
+		color: #0f2744;
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	.rice-card-body .rice-origin {
+		color: #D4A64A;
+		font-size: 13px;
+		font-weight: 600;
+		margin-bottom: 12px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.rice-card-body p {
+		color: #666;
+		font-size: 14px;
+		line-height: 24px;
+		margin-bottom: 20px;
+		flex-grow: 1;
+	}
+
+	.rice-card-body .rice-link {
+		display: inline-block;
+		padding: 12px 28px;
+		background: #D4A64A;
+		color: #fff;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 14px;
+		transition: 0.3s;
+		align-self: center;
+	}
+
+	.rice-card-body .rice-link:hover {
+		background: #0f2744;
+		transform: translateY(-3px);
+		box-shadow: 0 8px 20px rgba(15,39,68,0.3);
+	}
+
+	/* Owl Carousel Custom Nav */
+	.rice-slider .owl-nav {
+		position: absolute;
+		top: -70px;
+		right: 0;
+		display: flex;
+		gap: 10px;
+	}
+
+	.rice-slider .owl-nav button {
+		width: 45px;
+		height: 45px;
+		border-radius: 50% !important;
+		background: #fff !important;
+		border: 2px solid #D4A64A !important;
+		color: #D4A64A !important;
+		font-size: 18px !important;
+		transition: 0.3s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.rice-slider .owl-nav button:hover {
+		background: #D4A64A !important;
+		color: #fff !important;
+	}
+
+	.rice-slider .owl-nav button span {
+		font-size: 28px;
+		line-height: 1;
+		margin-top: -2px;
+	}
+
+	/* Owl Dots */
+	.rice-slider .owl-dots {
+		text-align: center;
+		margin-top: 25px;
+	}
+
+	.rice-slider .owl-dots .owl-dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: #ddd;
+		margin: 0 6px;
+		display: inline-block;
+		transition: 0.3s;
+	}
+
+	.rice-slider .owl-dots .owl-dot.active {
+		background: #D4A64A;
+		width: 30px;
+		border-radius: 10px;
+	}
+
+	@media (max-width: 767px) {
+		.rice-slider .owl-nav {
+			top: -50px;
+		}
+		.rice-slider .owl-nav button {
+			width: 35px;
+			height: 35px;
+		}
+		.rice-card-img {
+			height: 180px;
+		}
+	}
+</style>
+
+<body class="home-v1">
+	<div class="floating-contact">
+		<a href="https://wa.me/919003224421" target="_blank" class="contact-btn whatsapp">
+			<i class="fab fa-whatsapp"></i>
+		</a>
+		<a href="tel:+919003224421" class="contact-btn call">
+			<i class="fas fa-phone"></i>
+		</a>
+	</div>
+
+	<!-- Header Start -->
+	<header>
+		<div class="header-top-one">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9 col-sm-8">
+						<div class="header-left">
+							<ul>
+								<li><i class="fa fa-phone"></i>+91 90032 24421</li>
+								<li><i class="fa fa-envelope"></i>info@gmail.com</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-4">
+						<div class="header-right-div">
+							<div class="soical-profile">
+								<ul>
+									<li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hd-sec">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-8 phone-layout-logo">
+						<a href="index.html"><img src="img/logo1.png" alt=""/></a>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-8 logo-area">
+						<div class="logo"><a href="index.html"><img src="img/logo1.png" alt=""></a></div>
+					</div>
+					<div class="mobile-nav-menu"></div>
+					<div class="col-md-7 col-sm-10 menu-left">
+						<div class="menu">
+							<nav id="main-menu" class="main-menu">
+								<ul>
+									<li class="active"><a href="index.html">Home</a></li>
+									<li><a href="about.html">about us</a></li>
+									<li><a href="#">Our Products</a>
+										<ul>
+											<li><a href="MatchBox.html">Match Box</a></li>
+											<li><a href="CocoPeatBlocks.html">Coco Peat Blocks</a></li>
+											<li><a href="CocopeatCoir.html">Cocopeat Coir</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Rice</a>
+										<ul>
+											<li><a href="BasmatiRice.html">Basmati Rice</a></li>
+											<li><a href="JeerakshalaRice.html">Jeerakshala Rice</a></li>
+											<li><a href="PonniBoiledRice.html">Ponni Boiled Rice</a></li>
+											<li><a href="ThanjavurIdlyRice.html">Thanjavur Idly Rice</a></li>
+											<li><a href="SonaMasooriRice.html">Sona Masoori Rice</a></li>
+										</ul>
+									</li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header End -->
+
+	<!-- Slider Section Start -->
+	<div class="slider">
+		<div class="all-slide">
+			<div class="single-slide" style="background-image:url(img/slider2.png);">
+				<div class="slider-overlay"></div>
+				<div class="slider-wrapper">
+					<div class="slider-text">
+						<div class="slider-caption">
+							<h1>Premium Quality <span>Match Boxes, Coco Products & Rice</span></h1>
+							<p>AL ADIL EXPORTS specializes in supplying premium Match Boxes, Coco Peat Blocks, Cocopeat Coir, and authentic Indian rice varieties with superior quality and global export standards.</p>
+							<ul>
+								<li><a href="MatchBox.html">Our Products</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="single-slide" style="background-image:url(img/slider1.png);">
+				<div class="slider-overlay"></div>
+				<div class="slider-wrapper">
+					<div class="slider-text">
+						<div class="slider-caption">
+							<h1>Trusted Export Partner for <span>Global Markets</span></h1>
+							<p>Delivering reliable products, competitive pricing, and timely shipments to customers across domestic and international markets.</p>
+							<ul>
+								<li><a href="about.html">About Us</a></li>
+								<li><a href="contact.html">Get Quote</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Slider Section End -->
+
+	<!-- Why Us Section Start -->
+	<div class="why-us-sec pt-100 pb-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="why-us-box">
+						<span class="why-us-subtitle">About Us</span>
+						<h1>Delivering Quality Export Products Across Global Markets</h1>
+						<p>AL ADIL EXPORTS is a trusted supplier and exporter of premium quality Match Boxes, Coco Peat Blocks, Cocopeat Coir products, and authentic Indian rice varieties including Basmati, Jeerakshala, Ponni, Thanjavur Idly, and Sona Masoori Rice. Based in Chennai, India, we are committed to providing reliable products that meet the highest standards of quality, performance, and customer satisfaction.</p>
+						<p>With a strong focus on quality assurance, timely delivery, and sustainable business practices, we serve wholesalers, distributors, retailers, and agricultural businesses in both domestic and international markets.</p>
+						<div class="why-us-box-list">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="why-us-box-item">
+										<div class="media">
+											<div class="media-left"><div class="why-us-box-icon"><i class="fa fa-check-circle"></i></div></div>
+											<div class="media-body"><div class="why-us-box-text">Premium Quality Products</div></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="why-us-box-item">
+										<div class="media">
+											<div class="media-left"><div class="why-us-box-icon"><i class="fa fa-check-circle"></i></div></div>
+											<div class="media-body"><div class="why-us-box-text">Global Export Standards</div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="why-us-box-item">
+										<div class="media">
+											<div class="media-left"><div class="why-us-box-icon"><i class="fa fa-check-circle"></i></div></div>
+											<div class="media-body"><div class="why-us-box-text">Timely Delivery</div></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="why-us-box-item">
+										<div class="media">
+											<div class="media-left"><div class="why-us-box-icon"><i class="fa fa-check-circle"></i></div></div>
+											<div class="media-body"><div class="why-us-box-text">Competitive Pricing</div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="why-us-box-item">
+										<div class="media">
+											<div class="media-left"><div class="why-us-box-icon"><i class="fa fa-check-circle"></i></div></div>
+											<div class="media-body"><div class="why-us-box-text">Sustainable Products</div></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="why-us-box-item">
+										<div class="media">
+											<div class="media-left"><div class="why-us-box-icon"><i class="fa fa-check-circle"></i></div></div>
+											<div class="media-body"><div class="why-us-box-text">Customer Satisfaction</div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="why-us-img">
+						<img src="img/about4.png" alt="AL ADIL EXPORTS" class="img-responsive" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Why Us Section End -->
+
+	<!-- Service Section Start - Other Products -->
+	<div class="service-sec pt-100 pb-70">
+		<div class="service-sec-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="sec-title white-color">
+						<h1>Our Products</h1>
+						<div class="border-bottom"></div>
+						<p>Delivering premium quality export products with reliability, consistency, and global standards.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-12 inner">
+					<div class="single-service-inner">
+						<div class="service-thumb">
+							<img src="img/product1.jpg" alt="" style="height: 360px;" />
+							<div class="service-thumb-shape"></div>
+							<div class="service-thumb-shape-left"></div>
+							<div class="readmore-button"><a href="MatchBox.html">Explore More</a></div>
+						</div>
+						<div class="service-title-inner">
+							<div class="service-title"><h2><a href="MatchBox.html">Match Box</a></h2></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12 inner">
+					<div class="single-service-inner">
+						<div class="service-thumb">
+							<img src="img/product2.png" alt="" />
+							<div class="service-thumb-shape"></div>
+							<div class="service-thumb-shape-left"></div>
+							<div class="readmore-button"><a href="CocoPeatBlocks.html">Explore More</a></div>
+						</div>
+						<div class="service-title-inner">
+							<div class="service-title"><h2><a href="CocoPeatBlocks.html">Coco Peat Blocks</a></h2></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12 inner">
+					<div class="single-service-inner">
+						<div class="service-thumb">
+							<img src="img/product3.jpg" alt="" />
+							<div class="service-thumb-shape"></div>
+							<div class="service-thumb-shape-left"></div>
+							<div class="readmore-button"><a href="CocopeatCoir.html">Explore More</a></div>
+						</div>
+						<div class="service-title-inner">
+							<div class="service-title"><h2><a href="CocopeatCoir.html">Cocopeat Coir</a></h2></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Service Section End -->
+
+	<!-- Rice Carousel Section Start -->
+	<div class="rice-carousel-sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="sec-title">
+						<h1>Our Rice Varieties</h1>
+						<div class="border-bottom"></div>
+						<p>Premium quality Indian rice varieties sourced from the finest cultivation regions, processed with care for authentic taste and aroma.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="rice-slider owl-carousel">
+
+						<!-- Basmati Rice -->
+						<div class="rice-card">
+							<div class="rice-card-img">
+								<img src="img/1121 basmathi Steam-1.jpg" alt="Basmati Rice">
+								<div class="rice-badge">Premium</div>
+							</div>
+							<div class="rice-card-body">
+								<h3>1121 Basmati Rice</h3>
+								<span class="rice-origin">Punjab & Haryana</span>
+								<p>World's longest grain rice with exceptional aroma. Available in White Sella, Golden Sella & Steam varieties for premium biryanis.</p>
+								<a href="BasmatiRice.html" class="rice-link">Explore More</a>
+							</div>
+						</div>
+
+						<!-- Jeerakshala Rice -->
+						<div class="rice-card">
+							<div class="rice-card-img">
+								<img src="img/Jeerakshala-4.webp" alt="Jeerakshala Rice">
+								<div class="rice-badge">Traditional</div>
+							</div>
+							<div class="rice-card-body">
+								<h3>Jeerakshala Rice</h3>
+								<span class="rice-origin">Kerala</span>
+								<p>Traditional aromatic short-grain rice with cumin-like fragrance. Perfect for Malabar biryani, ghee rice & neychoru.</p>
+								<a href="JeerakshalaRice.html" class="rice-link">Explore More</a>
+							</div>
+						</div>
+
+						<!-- Ponni Boiled Rice -->
+						<div class="rice-card">
+							<div class="rice-card-img">
+								<img src="img/ponni1.jpg" alt="Ponni Boiled Rice">
+								<div class="rice-badge">Popular</div>
+							</div>
+							<div class="rice-card-body">
+								<h3>Ponni Boiled Rice</h3>
+								<span class="rice-origin">Tamil Nadu</span>
+								<p>Traditional parboiled rice with soft, fluffy texture. Ideal for sambar rice, rasam rice, curd rice & everyday meals.</p>
+								<a href="PonniBoiledRice.html" class="rice-link">Explore More</a>
+							</div>
+						</div>
+
+						<!-- Thanjavur Idly Rice -->
+						<div class="rice-card">
+							<div class="rice-card-img">
+								<img src="img/ThanjavurIdlyRice-4.webp" alt="Thanjavur Idly Rice">
+								<div class="rice-badge">Specialty</div>
+							</div>
+							<div class="rice-card-body">
+								<h3>Thanjavur Idly Rice</h3>
+								<span class="rice-origin">Thanjavur Delta</span>
+								<p>Specially cultivated for soft, fluffy idlis & crispy dosas. The secret behind authentic South Indian breakfast.</p>
+								<a href="ThanjavurIdlyRice.html" class="rice-link">Explore More</a>
+							</div>
+						</div>
+
+						<!-- Sona Masoori Rice -->
+						<div class="rice-card">
+							<div class="rice-card-img">
+								<img src="img/sona Masoori Rice.jpg" alt="Sona Masoori Rice">
+								<div class="rice-badge">Healthy</div>
+							</div>
+							<div class="rice-card-body">
+								<h3>Sona Masoori Rice</h3>
+								<span class="rice-origin">Andhra & Telangana</span>
+								<p>Lightweight, aromatic medium-grain rice. Low starch, healthy choice for daily meals, pulao & fried rice.</p>
+								<a href="SonaMasooriRice.html" class="rice-link">Explore More</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Rice Carousel Section End -->
+
+	<!-- Why Choose Us Section Start -->
+	<div class="why-choose-us-sec pt-100 pb-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="why-choose-v1">
+						<div class="why-choose-v1-title">
+							<span class="why-us-subtitle">Why Choose Us</span>
+							<h1>Your Reliable Partner for Quality Export Products</h1>
+							<h2>Trusted by Customers Across Domestic & Global Markets</h2>
+						</div>
+						<div class="why-choose-v1-single">
+							<div class="media">
+								<div class="media-left"><div class="icon"><img src="img/icon/secure.png" alt=""></div></div>
+								<div class="media-body">
+									<h2>Premium Quality Assurance</h2>
+									<p>We maintain strict quality standards for Match Boxes, Coco Peat Blocks, Cocopeat Coir, and all rice varieties to ensure reliability and customer satisfaction.</p>
+								</div>
+							</div>
+						</div>
+						<div class="why-choose-v1-single">
+							<div class="media">
+								<div class="media-left"><div class="icon"><img src="img/icon/award.png" alt=""></div></div>
+								<div class="media-body">
+									<h2>Global Export Excellence</h2>
+									<p>With efficient logistics, competitive pricing, and timely delivery, we serve customers worldwide while meeting international quality requirements.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 why-us-area">
+					<div class="why-us-img">
+						<img src="img/whychooseus.png" alt="AL ADIL EXPORTS" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Why Choose Us Section End -->
+
+	<!-- Message Section Start -->
+	<div class="message-sec pt-100 pb-70">
+		<div class="message-shape"></div>
+		<div class="message-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="message-desc">
+						<h1 class="message-title">Delivering Premium Match Boxes, Coco Products & Authentic Indian Rice Varieties to Customers Worldwide</h1>
+						<h2 class="message-subtitle">We are committed to quality, reliability, and timely delivery, serving domestic and international markets with trusted export solutions. Contact us today at<br><span>+91 90032 24421</span></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Message Section End -->
+
+	<!-- Testimonials Section Start -->
+	<div id="news" class="blog-sec pt-100 pb-70">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="sec-title">
+						<h1>What Our Clients Say</h1>
+						<div class="border-bottom"></div>
+						<p>Trusted by customers for quality products, reliable service, and timely delivery across domestic and international markets.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="testimonial-v1-all">
+						<div class="single-testimonial-v1">
+							<div class="details"><h2><a href="#">David Wilson</a></h2><span>Import Distributor</span></div>
+							<div class="rating">
+								<p>AL ADIL EXPORTS consistently delivers high-quality Match Boxes and rice varieties with excellent packaging standards. Their service is outstanding.</p>
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							</div>
+						</div>
+						<div class="single-testimonial-v1">
+							<div class="details"><h2><a href="#">Sarah Thomas</a></h2><span>Greenhouse Owner</span></div>
+							<div class="rating">
+								<p>The Coco Peat Blocks supplied by AL ADIL EXPORTS have excellent water retention. Their Basmati Rice quality is also exceptional for our needs.</p>
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							</div>
+						</div>
+						<div class="single-testimonial-v1">
+							<div class="details"><h2><a href="#">Michael George</a></h2><span>Agricultural Supplier</span></div>
+							<div class="rating">
+								<p>Their Cocopeat Coir and Ponni Boiled Rice are eco-friendly and well processed. We appreciate their reliable delivery and competitive pricing.</p>
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							</div>
+						</div>
+						<div class="single-testimonial-v1">
+							<div class="details"><h2><a href="#">Ahmed Khan</a></h2><span>Wholesale Trader</span></div>
+							<div class="rating">
+								<p>Professional service and excellent product quality across their entire range. AL ADIL EXPORTS is our trusted partner for rice and coco products.</p>
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Testimonials Section End -->
+
+	<!-- Footer Section Start -->
+	<footer class="footer">
+		<div class="footer-shape"></div>
+		<div class="footer-overlay"></div>
+		<div class="footer-sec">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 col-sm-6">
+						<div class="footer-wedget-one">
+							<h2>About Us</h2>
+							<p>Al Adil Exports is dedicated to delivering quality Match Boxes, eco-friendly Coco Peat & Coir Products, and premium rice varieties including Basmati, Jeerakshala, Ponni, Thanjavur Idly, and Sona Masoori Rice.</p>
+							<div class="footer-social">
+								<ul>
+									<li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="footer-widget-menu">
+							<h2>Our Rice Varieties</h2>
+							<ul>
+								<li><a href="BasmatiRice.html">Basmati Rice</a></li>
+								<li><a href="JeerakshalaRice.html">Jeerakshala Rice</a></li>
+								<li><a href="PonniBoiledRice.html">Ponni Boiled Rice</a></li>
+								<li><a href="ThanjavurIdlyRice.html">Thanjavur Idly Rice</a></li>
+								<li><a href="SonaMasooriRice.html">Sona Masoori Rice</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="footer-widget-menu">
+							<h2>Other Products</h2>
+							<ul>
+								<li><a href="MatchBox.html">Match Box</a></li>
+								<li><a href="CocoPeatBlocks.html">Coco Peat Blocks</a></li>
+								<li><a href="CocopeatCoir.html">Cocopeat Coir</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 footer-contact-inner">
+						<div class="footer-contact-info">
+							<div class="footer-contact-info-icon"><img src="img/icon/footer-map-marker.png" alt="" style="height:30px;"/></div>
+							<div class="footer-contact-info-text"><span>No.4, Manickam Pillai Street, Mannurpet, Chennai 600050</span></div>
+						</div>
+					</div>
+					<div class="col-md-4 footer-contact-inner">
+						<div class="footer-contact-info">
+							<div class="footer-contact-info-icon"><img src="img/icon/footer-envelop.png" alt="" style="height:30px;"/></div>
+							<div class="footer-contact-info-text"><a href="mailto:info@gmail.com"><span>info@gmail.com</span></a></div>
+						</div>
+					</div>
+					<div class="col-md-4 footer-contact-inner">
+						<div class="footer-contact-info">
+							<div class="footer-contact-info-icon"><img src="img/icon/footer-phone.png" alt="" style="height:30px;"/></div>
+							<div class="footer-contact-info-text"><a href="tel:+919003224421"><span>+91 90032 24421</span></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom-sec">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-12">
+						<div class="copy-right"><span>Copyright &copy; <span id="year"></span> Al Adil Exports. All Rights Reserved.</span></div>
+					</div>
+					<div class="col-md-4 col-sm-12">
+						<div class="site-developer"><span>Developed by <a href="https://chennaileads.com/" target="_blank">Chennai Leads</a></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer Section End -->
+
+	<!-- Scripts Js Start -->
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/owl.animate.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/modernizr.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.meanmenu.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		document.getElementById("year").textContent = new Date().getFullYear();
+
+		// Initialize Rice Carousel
+		$(document).ready(function(){
+			$('.rice-slider').owlCarousel({
+				loop: true,
+				margin: 20,
+				nav: true,
+				navText: ['<span>‹</span>', '<span>›</span>'],
+				dots: true,
+				autoplay: true,
+				autoplayTimeout: 4000,
+				autoplayHoverPause: true,
+				smartSpeed: 600,
+				responsive: {
+					0: {
+						items: 1
+					},
+					600: {
+						items: 2
+					},
+					1000: {
+						items: 3
+					}
+				}
+			});
+		});
+	</script>
+</body>
+</html>
